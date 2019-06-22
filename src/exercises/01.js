@@ -1,6 +1,6 @@
 // Building the toggle component
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 // 🐨 uncomment this import to get the switch component.
 // It takes an `onClick` and an `on` prop
 import { Switch } from '../switch'
@@ -10,8 +10,8 @@ const Toggle = ({ onToggle }) => {
 
   const handleClick = () => {
     const newOn = !on
-    setOn(newOn)
     onToggle(newOn)
+    setOn(newOn)
   }
 
   return <Switch onClick={handleClick} on={on} />
